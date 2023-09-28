@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <style>
+        .item {
+            min-width: 80px;
+            
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+        marquee-slide {
+            padding: 10px;
+        }
+
+        .active-item {
+            background-color: red;
+        }
+
+        .marquee-wrapper {
+            display: flex;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Horizontal LTR</h1>
+        <marquee-component>
+            <marquee-move>
+                <marquee-slide>
+                    <span class="item">1</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">2</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">3</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">4</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">5</span>
+                </marquee-slide>
+                
+            </marquee-move>
+        </marquee-component>
+
+        <h1>Horizontal RTL</h1>
+        <marquee-component dir="rtl" speed="3">
+            <marquee-move>
+                <marquee-slide>
+                    <span class="item">1</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">2</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">3</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">4</span>
+                </marquee-slide>
+                <marquee-slide>
+                    <span class="item">5</span>
+                </marquee-slide>
+                
+            </marquee-move>
+        </marquee-component>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div>
+                <h1>Vertical LTR</h1>
+                <marquee-component mode="vertical">
+                    <marquee-move>
+                        <marquee-slide>
+                            <span class="item">1</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">2</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">3</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">4</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">5</span>
+                        </marquee-slide>
+                        
+                    </marquee-move>
+                </marquee-component>
+            </div>
+
+            <div>
+                <h1>Vertical RTL</h1>
+                <marquee-component mode="vertical" dir="rtl" speed="2">
+                    <marquee-move>
+                        <marquee-slide>
+                            <span class="item">1</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">2</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">3</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">4</span>
+                        </marquee-slide>
+                        <marquee-slide>
+                            <span class="item">5</span>
+                        </marquee-slide>
+                        
+                    </marquee-move>
+                </marquee-component>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+</html>
